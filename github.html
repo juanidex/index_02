@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi PERFIL</title>
+  <style>
+    body {
+      background-color: #f6ffa8;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .tarjeta {
+      background-color: rgb(126, 243, 247);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      transition: 0.4s;
+    }
+
+    .avatar {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .info-extra {
+      display: none;
+      margin-top: 15px;
+      color: #444;
+    }
+
+    button {
+      background-color: #ff0000;
+      color: rgb(255, 255, 255);
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0adaff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tarjeta">
+    <img src="https://wallpaperaccess.com/full/3243794.jpg" alt="Foto de perfil" class="avatar">
+    <h2>Juan carhuachin sulca</h2>
+    <p>"seguir soñador el objetivo"</p>
+
+    <button onclick="mostrarInfo()">Mostrar más info</button>
+
+    <div class="info-extra" id="info">
+      <p>📧 71790545@idexpasco.edu.pe</p>
+      <p>🧟‍♂️ steam: un left</p>
+      <p>👨🏻‍💻 githup: https://github.com/juanidex</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarInfo() {
+      let info = document.getElementById("info");
+
+      // Alternar visibilidad
+      if (info.style.display === "none" || info.style.display === "") {
+        info.style.display = "block";
+      } else {
+        info.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
